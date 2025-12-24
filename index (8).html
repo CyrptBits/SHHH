@@ -1,0 +1,87 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>SHHH!</title>  
+<link rel="stylesheet" href="style.css">  
+</head>  
+<body>  
+  
+<header>  
+  <div class="top-bar">  
+    <div class="search-container">  
+      <input type="text" id="searchInput" placeholder="Search titles...">  
+    </div>  
+    <div class="top-buttons">  
+      <button id="openPostDiv">Post</button>  
+      <button id="openAboutDiv">About</button>  
+    </div>  
+  </div>  
+  <div class="title-bar">  
+    <h1 id="homeBtn">SHHH!</h1>  
+    <p>"Don't let people know about you!"</p>  
+  </div>  
+</header>  
+  
+<!-- HOME FEED -->  
+<div id="homeDiv" class="container fade-in">  
+  <div class="table-container">  
+    <table id="postsTable">  
+      <thead>  
+        <tr>  
+          <th>Title</th>  
+          <th>Created By</th>  
+          <th>Views</th>  
+          <th>Date</th>  
+        </tr>  
+      </thead>  
+      <tbody></tbody>  
+    </table>  
+  </div>  
+</div>  
+  
+<!-- NEW POST -->  
+<div id="postDiv" class="container fade-in" style="display:none;">  
+  <div class="post-form">  
+    <input type="text" id="aliasInput" placeholder="Your alias (optional)">  
+    <input type="text" id="titleInput" placeholder="Post title">  
+    <textarea id="messageInput" placeholder="Write your message here..." style="height:300px; font-family: monospace;"></textarea>  
+    <div class="button-center">  
+      <button id="submitPost">Submit Post</button>  
+      <button id="cancelPost">Cancel</button>  
+    </div>  
+  </div>  
+</div>  
+  
+<!-- VIEW POST -->  
+<div id="viewPostDiv" class="container fade-in" style="display:none;">  
+  <div class="post-form">  
+    <h2 id="viewTitle"></h2>  
+    <p id="viewAlias"></p>  
+    <pre id="viewMessage" class="message-box"></pre>  
+    <p id="viewDate"></p>  
+    <p id="viewStats"></p>  
+    <div class="button-center">  
+      <button id="backToHome">Back</button>  
+    </div>  
+  </div>  
+</div>  
+  
+<!-- ABOUT -->  
+<div id="aboutDiv" class="container fade-in" style="display:none;">  
+  <div class="post-form">  
+    <h2>About SHHH!</h2>  
+    <p>  
+      SHHH! is a semi-anonymous posting platform inspired by Doxbin.  
+      Users can post text or ASCII messages with optional alias. Admins can track posts but your identity remains hidden from other users.  
+    </p>  
+    <div class="button-center">  
+      <button id="closeAbout">Back</button>  
+    </div>  
+  </div>  
+</div>  
+  
+<script type="module" src="main.js"></script>  
+</body>  
+</html>
